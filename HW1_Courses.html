@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Courses </title>
+
+
+</head>
+
+<script>
+"use strict";
+function push() {
+
+        name = document.getElementById("xe").value
+        midterm = document.getElementById("ie").value
+        final = document.getElementById("je").value
+        var ar = new Array(name, midterm, final);
+        for (var i = 0; i < ar.length; i++) {
+            array.push(ar[i]);
+        }
+}
+
+
+function printt(){
+
+
+        for (var i = 0; i < array.length / 3; i++) {
+            document.getElementById("mesaj1").innerHTML +=array[i * 3] + "    " + array[i * 3 + 1] + "     " + array[i * 3 + 2] + "  ";
+            document.getElementById("mesaj1").innerHTML +="<br />";
+        }
+
+}
+
+    function max() {            
+        
+    }
+
+
+function avg(){
+
+
+
+        var ort = 0;
+        for (var i = 0; i < array.length / 3; i++) {
+            s1 = parseInt(array[i * 3 + 1]);
+            s2 = parseInt(array[i * 3 + 2]);
+            ort = (s1 + s2) / 2;
+            var arr = new Array(array[i * 3], ort);
+            for (var j = 0; j < arr.length; j++) {
+                avgArray.push(arr[j]);
+            }
+        }        
+
+        for (var i = 0; i < avgArray.length/2; i++) {
+            document.getElementById("mesaj2").innerHTML +=avgArray[i * 2] + "    " + avgArray[i * 2 + 1] + "    ";
+            document.getElementById("mesaj2").innerHTML +="<br />";
+        }
+
+
+ }
+
+
+
+</script>
+
+<body>
+<h2 id=title></h2>
+
+<p id=outA></p>
+
+<p>
+<br>
+Name = <input type=text   id=xe value=BP1 style="width:99px"> <br>
+<br>
+Midterm = <input type=number id=ie value=55  style="width:99px"> &emsp; <br> 
+<br>
+Final = <input type=number id=je value=60  style="width:99px"> &emsp; <br>
+
+</p>
+<p>
+<input type=button value="add"   onClick="push()">
+<input type=button value="avg"  onClick="avg()">
+<input type=button value="max"  onClick="max()">
+<input type=button value="printt"  onClick="printt()">
+</p>
+
+<hr />
+
+    <p>
+        <strong>Name  Midterm  Final </strong>
+        <pre>
+    <p id="mesaj1"></p></pre>
+    <hr />
+    <p>
+        <strong>Name  Average</strong>
+        <pre>
+    <p id="mesaj2"></p></pre>
+    <hr />
+    <p>
+        <strong>Name  Max</strong>
+        <pre>
+    <p id="mesaj3"></p></pre>
+    <h1 />
+
+
+    <!--<p>
+        Ref:
+        <a href="https://www.w3schools.com/js/js_arrays.asp" target="ExternalDocument">Array Examples</a>
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections" target="ExternalDocument">Set Examples</a>
+    </p>-->
+
+<script>
+    title.innerText = document.title;
+
+        var name, midterm, final, s1, s2, s3;
+        var array = [];
+        var avgArray = new Array();
+        var maxArray = new Array();
+
+</script>
+
+</body>
+</html>
