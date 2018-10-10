@@ -4,3 +4,4 @@
 
 [Homework 1](https://dilaerbakan.github.io/BLM_advprg/HW1_Courses.html)
 
+[Inspector](https://github.com/dilaerbakan/BLM_advprg/inspector.html)
