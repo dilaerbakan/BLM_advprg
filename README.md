@@ -7,3 +7,5 @@
 [Inspector](https://dilaerbakan.github.io/BLM_advprg/inspector.html)
 
 [CW4](https://dilaerbakan.github.io/BLM_advprg/index.html)
+
+[CW5](https://dilaerbakan.github.io/BLM_advprg/CW5/CW5.html)
