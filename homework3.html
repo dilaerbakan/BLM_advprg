@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Animations </title>
+<style>
+#myContainer {
+  width: 425px;
+  height: 425px;
+  position: relative;
+  background: purple;
+}
+#myAnimation {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  background-color: black;
+}
+</style>
+</head>
+<body>
+<h2 id=title></h2>
+
+<p>
+<button onclick="buton()">Click Me</button> 
+<button onClick="out.animate(t1, 8000)">Font Size</button>
+</p>
+<div id ="myContainer">
+<div id ="myAnimation"></div>
+</div>
+
+<p id=out>Animations Are Fun</p>
+<script>
+function buton() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 15);
+  
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+
+const t1= { fontSize: ["100%", "200%", "100%", "150%", "100%"] }; 
+   title.innerText = document.title;
+  
+</script>
+
+</body>
+</html>
+
