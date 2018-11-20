@@ -9,3 +9,5 @@
 [CW4](https://dilaerbakan.github.io/BLM_advprg/index.html)
 
 [CW5](https://dilaerbakan.github.io/BLM_advprg/CW5/CW5.html)
+
+[Homework 3](https://dilaerbakan.github.io/BLM_advprg/homework3.html)
