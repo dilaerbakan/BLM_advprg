@@ -2,53 +2,82 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link href="https://maeyler.github.io/JS/sss/inspector.css" 
-          rel="stylesheet" media="all">
-    <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
-    
-    <script src="database.js"></script>
-    <title>Eloquent JavaScript </title>
+    <meta name="mobile-app" content="yes">
+	  <meta name="author" content="Dila Erbakan, 2018" />
+	  <meta name="description" content="BLM305 FSMV University" />
+  
+  <title>Dila Erbakan - Advanced Programming </title>
+   <link rel="manifest" href="manifest.json">
 </head>
 
-<body>
-<p><b id=docName></b> &nbsp;
-
-</p>
-
-<script>
-"use strict";
-var a, b, c, code;  //global variables
-function init() {
-    let
-       len = 123, name = "Circle", pi = Math.PI, 
-       sqrt = Math.sqrt, power = Math.pow;
-    a = [0, 11, "22", "abc"];
-    c = {len, name, pi, sqrt, power};
-   
-    display(MENU); 
-  
-    display(new CW4());
-    display(MENU);
-}
-    docName.innerText = "CW4 ";
-    try {
-        inspect(document.body, init); //makes the table
-        //inp.value = "new Number(c.pi)";
-    } catch(e) {
-        reportError(e);
+ <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('sw.js')
+        .then((reg) => { console.log('SW Registered', reg.active) })
+        .catch(console.log)
     }
-</script>
+  </script>
+  
+  
+<style>
+body{
+ background : pink;	
+}
+html{
+   height: window.innerHeight;
+   width: window.innerWidth;
+}	
 
-<p><input type=file multiple onChange='fileSelect(this)' />
-</p><p>
-<a href="https://dilaerbakan.github.io/BLM_advprg/Array%20modify_Dila.html">Array Modify</a>
-<a href="https://dilaerbakan.github.io/BLM_advprg/HW1_Courses.html">HW1 Courses</a>
-<a href="https://dilaerbakan.github.io/BLM_advprg/inspector.html">Inspector</a>
+</style>
+</head>
 
+<body>     
+
+<h1 > <font color="black"> Dila Erbakan - Projects</font></h1>
+
+<p>
+ClassWorks
 </p>
-<pre id=disp1></pre>
-<img id=disp2 />
+
+ <ul>
+      <li><a href="../Array%20modify_Dila.html">Array Demo</a></li>
+      <br>
+      <li><a href="../inspector.html">Inspector</a></li>
+      <br>
+      <li><a href="../index.html">Class Work 4</a></li>
+      <br>
+      <li><a href="../CW5/CW5.html">Class Work 5</a></li>
+      <br>
+      <li><a href="../classwork6.html">Class Work 6</a></li>
+      <br>
+      <li><a href="../CW7/CW7.html">Class Work 7</a></li>
+   </ul>
+
+<p>
+HomeWorks
+</p>
+
+<ul>
+      <li><a href="../HW1_Courses.html">HomeWork 1</a></li>
+      <br>
+      <li><a href="../homework3.html">Home Work 3</a></li>
+</ul>
+	
+<p>
+Useful Links 
+</p>	
+    <ul>
+	<p> Ref: <a href="https://www.yazilimbilisim.net/javascript/javascript-dersleri/"
+      target="ExternalDocument">JavaScript Dersleri</a></p>
+	    </ul>    
+<br>
+
+<a href="..">My Repository </a>
+
+
 
 </body>
+
+
 </html>
