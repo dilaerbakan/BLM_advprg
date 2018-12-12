@@ -22,4 +22,4 @@ Homeworks
 
 [Homework 3](https://dilaerbakan.github.io/BLM_advprg/HW3/homework3.html)
 
-[Homework 4](https://dilaerbakan.github.io/BLM_advprg/CW7/index.html)
+[Homework 4](https://dilaerbakan.github.io/BLM_advprg/index.html)
