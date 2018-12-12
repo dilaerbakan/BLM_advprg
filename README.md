@@ -6,9 +6,11 @@ Classworks
 
 [Inspector](https://dilaerbakan.github.io/BLM_advprg/inspector.html)
 
-[CW4](https://dilaerbakan.github.io/BLM_advprg/index.html)
+[CW4](https://dilaerbakan.github.io/BLM_advprg/CW4.html)
 
 [CW5](https://dilaerbakan.github.io/BLM_advprg/CW5/CW5.html)
+
+[CW6](https://dilaerbakan.github.io/BLM_advprg/CW6/CW6.html)
 
 [CW7](https://dilaerbakan.github.io/BLM_advprg/CW7/CW7.html)
 
@@ -16,8 +18,8 @@ Classworks
 
 Homeworks
 
-[Homework 1](https://dilaerbakan.github.io/BLM_advprg/HW1_Courses.html)
+[Homework 1](https://dilaerbakan.github.io/BLM_advprg/HW1/HW1_Courses.html)
 
-[Homework 3](https://dilaerbakan.github.io/BLM_advprg/homework3.html)
+[Homework 3](https://dilaerbakan.github.io/BLM_advprg/HW3/homework3.html)
 
 [Homework 4](https://dilaerbakan.github.io/BLM_advprg/CW7/index.html)
