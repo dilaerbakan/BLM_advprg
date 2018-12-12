@@ -10,7 +10,7 @@ Classworks
 
 [CW5](https://dilaerbakan.github.io/BLM_advprg/CW5/CW5.html)
 
-[CW6](https://dilaerbakan.github.io/BLM_advprg/CW6/CW6.html)
+[CW6](https://dilaerbakan.github.io/BLM_advprg/CW6/classwork6.html)
 
 [CW7](https://dilaerbakan.github.io/BLM_advprg/CW7/CW7.html)
 
