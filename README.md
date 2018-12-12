@@ -6,7 +6,7 @@ Classworks
 
 [Inspector](https://dilaerbakan.github.io/BLM_advprg/inspector.html)
 
-[CW4](https://dilaerbakan.github.io/BLM_advprg/CW4.html)
+[CW4](https://dilaerbakan.github.io/BLM_advprg/cw4.html)
 
 [CW5](https://dilaerbakan.github.io/BLM_advprg/CW5/CW5.html)
 
