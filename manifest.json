@@ -2,13 +2,13 @@
   "name": " Dila Erbakan - Advanced Programming",
   "short_name": "advprog",
   "description": "Advanced Programming work files",
-  "start_url": "BLM_advprg/CW7/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "cyan",
   "theme_color": "cyan",
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/dilaerbakan/BLM_advprg/master/CW7/JS.png",
+      "src": "https://dilaerbakan.github.io/BLM_advprg/JS.png",
       "sizes": "512x512",
       "type": "image/png"
     }

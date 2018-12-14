@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title> SVG and Canvas </title>
+
+  <style>
+    svg, canvas {
+        background: purple;
+        font: 10px arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Using Canvas</h2>
+<canvas id=canvas width=340 height=200></canvas>
+<p>Canvas is an image drawn by JavaScript</p>
+<pre id=sample></pre>
+
+<hr />
+
+<p>Ref: <i>Eloquent JavaScript</i>,
+<a href="http://eloquentjavascript.net/17_canvas.html" 
+   target="ExternalDocument"> Chap 17</a>
+</p>
+
+<script>
+"use strict";
+function draw() {
+    cx.beginPath(); 
+    cx.lineWidth = 4;
+    cx.fillStyle = "cyan"; cx.strokeStyle = "gray";
+    cx.arc(50, 50, 40, 0, 2*Math.PI);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; 
+    cx.fillText("arc",44,55);
+	
+	
+    cx.beginPath(); cx.lineWidth = 5;
+    cx.fillStyle = "yellow"; cx.strokeStyle = "red";
+    cx.rect(110, 10, 100, 80);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; 
+    cx.fillText("rect",148,55);
+}
+function metod() {
+
+    cx.clearRect(0,0,340,100);
+	cx.beginPath(); cx.lineWidth = 4;
+	cx.fillStyle = renk.value;
+	
+	cx.strokeStyle = "green";
+	cx.arc(50, 60, 40, 0, 2*Math.PI);
+	cx.fill(); cx.stroke();
+	cx.fillStyle = "purple"; 
+	cx.fillText("arc",44,55);
+	
+	
+    cx.beginPath(); cx.lineWidth = 5;
+    cx.fillStyle = renk.value; 
+	
+    cx.strokeStyle = "pink";
+    cx.rect(100, 20, 100, 70);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "blue"; 
+    cx.fillText("rect",150,55);
+    
+}
+   
+    const cx = canvas.getContext("2d");
+    draw();
+	
+
+</script>
+
+<p>Text: 
+<input type=text id=txtc value="CW9">
+
+</p>
+
+
+<p>
+<input type="color" value="#ff0000" id="renk">
+<button class="button" ,  onClick='metod()'> New </button>
+<button class="button" ,  onClick='draw()'> Draw </button>
+</p>
+
+</body>
+</html>
