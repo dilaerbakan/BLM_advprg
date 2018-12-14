@@ -20,6 +20,8 @@ Homeworks
 
 [Homework 1](https://dilaerbakan.github.io/BLM_advprg/HW1/HW1_Courses.html)
 
+[Homework 2](https://dilaerbakan.github.io/BLM_advprg/HW2/Ekran.html)
+
 [Homework 3](https://dilaerbakan.github.io/BLM_advprg/HW3/homework3.html)
 
 [Homework 4](https://dilaerbakan.github.io/BLM_advprg/CW7/index.html)
