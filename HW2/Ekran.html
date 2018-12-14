@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Home Work 2</title>
+
+<script src="Database.js"> </script>
+
+<script>
+c=new Database();
+</script>
+
+</head>
+
+<h2 id="title" style="
+    color: blue;
+<h2 id="title" >Home Work 2</h2>
+
+<style>
+body{
+ background : pink;	
+}
+html{
+   height: window.innerHeight;
+   width: window.innerWidth;
+}	
+
+</style>
+
+<style>
+    span1 {
+        margin-left: 18px
+    }
+    span2 {
+        margin-left: 1px
+    }
+    span3 {
+        margin-left: 23px
+    }
+</style>
+
+
+<p><b>GPA:</b><br /> 
+<span1><input type=number id=gpa ><br /><br></span1>
+<b>Student ID: </b><br />
+<span1><input type=number id=sID ><br /><br></span1>
+<b>Course Code: </b><br />
+<span1><input type=text id=cID ><br /><br></span1>
+<b>Class Code: </b><br />
+<span1><input type=text id=dID ><br /><br></span1>
+</p>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.randomStd()'>Random Student</button>
+<button class="button" , onClick='out.innerText+="\n\n"+c.randomCourse()'>Random Course</button>
+<br></br>
+<button class="button" , onClick='out.innerText+="\n\n"+c.findBest()'>Best GPA</button>
+<button class="button" , onClick='out.innerText+="\n\n"+c.underGpa(gpa.value)'> Under GPA</button>
+<button class="button" , onClick='out.innerText+="\n\n"+c.aboveGpa(gpa.value)'> Above GPA</button>
+<br></br>
+<button class="button" ,  onClick='out.innerText+="\n\n"+c.fStudents(cID.value)'> List Students </button>
+<button class="button" , onClick='out.innerText+="\n\n"+c.findClassList(cID.value)'> List Classes </button>
+<br></br>
+<button class="button" , onClick='out.innerText=""'>Clear</button>
+<br></br>
+
+
+<p id=out >Result:</p>
+
+
+<script>
+    title.innerText = document.title;
+        
+</script>
+
+</body>
+</html>
