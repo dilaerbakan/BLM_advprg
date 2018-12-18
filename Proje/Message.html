@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Support Screen</title>
+</head>
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+div#main{
+width: 830px;
+height: 650px;
+margin: left; 
+font-family: 'raleway', sans-serif;
+}
+label{
+float: left;
+font-size: 20px;
+}
+input[type="text"]{
+width:100%;
+margin-top:10px;
+height: 35px;
+margin-bottom: 25px;
+padding:10px;
+border:3px solid #2BC1F2;
+}
+
+textarea#message{
+
+border:2px solid cornflowerblue;
+padding:10px;
+margin-bottom: 10px;
+margin-top: 10px;
+overflow: auto;
+ width: 280px;
+ height:100px;
+resize:none;
+
+
+}
+input[type=button]{
+width: 15%;
+background-color:gray;
+color: white;
+border: 3px solid gray;
+padding: 10px;
+font-size:12px;
+border-radius: 5px;
+margin-bottom: 15px;
+}
+
+
+p{
+font-size:12px;
+color:red;
+}
+
+select#topic {
+ 
+
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   margin: left;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 300px;
+}
+
+
+</style>
+
+<script>
+  
+function send(){
+
+var textarea= document.getElementById("message").value.length;
+
+if(textarea==0 || document.getElementById("topic").value==0){
+alert("Please fill in all blanks!");
+
+}
+else{
+alert("Your message was successfully sent!");
+document.getElementById("message").value="";
+document.getElementById("topic").value=0;
+}
+}
+function homepage(){
+window.location = "Homepage.html";
+}
+	</script>	
+      
+
+<body>
+<form id="message-form" action="/" method="post">
+<div align="center">
+<div style=" border: solid 1px #006D9C; " align="left">
+<div style="background-color:purple; color:#FFFFFF; padding:10px;"><b>Message Form</b></div>
+ <h4> Fill in the form below, and we'll get back to you within 24 hours.</h4>
+<div style="margin: 15px">
+
+<div id="main">
+
+
+<label>Topic:</label>
+<br><br>
+<select id="topic">
+ 
+  <option value="0">Please Choose</option>
+  <option value="1">Proposition</option>
+  <option value="2">Complaint</option>
+  <option value="3">Request</option>
+</select>
+
+<p id="p1"></p>
+
+<label>Your Message:</label>
+<br><br>
+<textarea id='message' type='textarea' rows="3" maxlength="255" ></textarea>
+<p id="p2"></p>
+
+<input id="submit" type="button" class="btn" value="Send" onclick="send()">
+<input id="back" type="button" class="btn2" value="Homepage" onclick="homepage()">
+
+
+
+</div>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

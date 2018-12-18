@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Form</title>
+</head>
+
+<style>
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+input[type=text],input[type=password],#state{
+width:30.5%;
+padding: 10px;
+margin-top: 8px;
+border: 1px solid #ccc;
+padding-left: 5px;
+font-size: 16px;
+font-family:raleway;
+}
+input[type=button]{
+width: 10%;
+background-color:gray;
+color: white;
+border: 3px solid gray;
+padding: 10px;
+font-size:12px;
+border-radius: 5px;
+margin-bottom: 15px;
+}
+
+
+.result{
+font-size:20px; 
+}
+</style>
+
+<script>
+var attempt = 3;
+ var text;
+ function logControl() {
+
+            var username = document.getElementById("usern").value;
+            var password = document.getElementById("pass").value;
+           if ( username == "dila" && password == "3548"){
+               alert ("Login successfully");
+               window.location = "Message.html"; 
+               return false;
+                }
+           else{
+attempt --;
+alert("You have left "+attempt+" attempt;");
+
+            if( attempt == 0){
+              document.getElementById("usern").disabled = true;
+              document.getElementById("pass").disabled = true;
+              document.getElementById("submit").disabled = true;
+               return false;
+           
+            
+			document.getElementById("Result").innerHTML = text;
+        } 
+
+}
+
+ }
+
+
+</script>
+
+<body>
+<div align="center">
+<div style=" border: solid 1px #006D9C; " align="left">
+<div style="background-color:purple; color:#FFFFFF; padding:10px;"><b>Login Form</b></div>
+<div style="margin: 15px">
+
+<div id="form">
+<label>Username:</label>
+<input id='usern' type='text' placeholder="Specify username">
+<p id="p1"></p>
+
+<label>Password : </label>
+<input id='pass' type='password' placeholder="Specify password">
+<p id="p2"></p>
+
+
+
+<input id="submit" type="button" class="btn" value="Login" onclick="logControl()"  >
+			
+			<p class="result" id="Result"></p>
+</form>
+</div>
+</body>
+</html>
+
+
+
+
+
