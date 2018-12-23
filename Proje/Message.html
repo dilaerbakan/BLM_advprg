@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Support Screen</title>
+<script src="Database.js"> </script>
 </head>
 
 <style>
@@ -26,7 +27,7 @@ padding:10px;
 border:3px solid #2BC1F2;
 }
 
-textarea#message{
+textarea[type=message]{
 
 border:2px solid cornflowerblue;
 padding:10px;
@@ -72,14 +73,58 @@ select#topic {
    width: 300px;
 }
 
+table { border-collapse: collapse; }
+    th { color: blue; padding: 5px 5px; }
+    td { 
+        border: 1px solid blue; 
+        padding: 5px 5px; 
+        text-align: center; 
+    }
+    td:hover .tip { visibility: visible; }
+    .tip {
+        visibility: hidden;
+        font-size: small;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        padding: 5px 5px;
+        position: absolute;
+    }
 
 </style>
 
+
+<script>
+c=new Database();
+c.addKullanici();
+
+"use strict";
+function makeTable( ) {
+    let row = "<th></th>";
+    for (let j of (Object.keys(c.sikayetList[0]))) 
+        row += "<th>"+j+"</th>";
+    let text = "<tr>"+row+"</tr>";
+    for (let i = 0; i < c.sikayetList.length; i++) {
+       row = "<th>"+(i+1)+"</th>";
+       for (let j of (Object.keys(c.sikayetList[0]))) {
+          
+          row += "<td>"+(c.sikayetList[i][j])+"</td>";
+       }
+       text += "<tr>"+row+"</tr>";
+    }
+    const t = text.length+" chars";
+    
+    tablo.innerHTML = text; 
+}
+
+</script>
+
 <script>
   
-function send(){
+function send(a,b){
 
-var textarea= document.getElementById("message").value.length;
+
+var textarea= document.getElementById("textarea").value.length;
 
 if(textarea==0 || document.getElementById("topic").value==0){
 alert("Please fill in all blanks!");
@@ -87,18 +132,25 @@ alert("Please fill in all blanks!");
 }
 else{
 alert("Your message was successfully sent!");
-document.getElementById("message").value="";
+document.getElementById("textarea").value="";
 document.getElementById("topic").value=0;
+
+let sn=c.sikayetList[(c.sikayetList.length)-1]
+let id=sn.id+1
+s=new Sikayet(id,a,b);
+c.sikayetler.set(id,s)
+c.sikayetList.push(s);
 }
 }
 function homepage(){
 window.location = "Homepage.html";
+
 }
 	</script>	
       
 
 <body>
-<form id="message-form" action="/" method="post">
+<form id="message-form">
 <div align="center">
 <div style=" border: solid 1px #006D9C; " align="left">
 <div style="background-color:purple; color:#FFFFFF; padding:10px;"><b>Message Form</b></div>
@@ -112,22 +164,28 @@ window.location = "Homepage.html";
 <br><br>
 <select id="topic">
  
-  <option value="0">Please Choose</option>
-  <option value="1">Proposition</option>
-  <option value="2">Complaint</option>
-  <option value="3">Request</option>
+  <option value="Please Choose">Please Choose</option>
+  <option value="Proposition">Proposition</option>
+  <option value="Complaint">Complaint</option>
+  <option value="Request">Request</option>
 </select>
 
 <p id="p1"></p>
 
 <label>Your Message:</label>
 <br><br>
-<textarea id='message' type='textarea' rows="3" maxlength="255" ></textarea>
+<textarea id='textarea' type='message' rows="3" maxlength="255" ></textarea>
 <p id="p2"></p>
 
-<input id="submit" type="button" class="btn" value="Send" onclick="send()">
+<input id="submit" type="button" class="btn" value="Send" onclick="send(topic.value,textarea.value)">
 <input id="back" type="button" class="btn2" value="Homepage" onclick="homepage()">
+<input id="liste" type="button" class="btn3" value="List" onclick="makeTable()">
 
+
+<table id="tablo">
+
+
+</table>
 
 
 </div>

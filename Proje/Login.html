@@ -34,21 +34,36 @@ font-size:20px;
 }
 </style>
 
+<script src="Database.js"> </script>
+
 <script>
+
+c=new Database();
+c.addKullanici();
+
 var attempt = 3;
  var text;
  function logControl() {
 
             var username = document.getElementById("usern").value;
             var password = document.getElementById("pass").value;
-           if ( username == "dila" && password == "3548"){
+let bulundu=0;
+
+for(let i=1; i<100; i++){
+    if(c.kullanicilar.get(i)){
+        let k=c.kullanicilar.get(i)
+
+           if ( username == k.kadi && password == k.sifre){
                alert ("Login successfully");
                window.location = "Message.html"; 
+               bulundu=1;
                return false;
                 }
-           else{
-attempt --;
-alert("You have left "+attempt+" attempt;");
+    }
+}
+      if(bulundu==0){
+           attempt --;
+           alert("You have left "+attempt+" attempt;");
 
             if( attempt == 0){
               document.getElementById("usern").disabled = true;
@@ -61,6 +76,7 @@ alert("You have left "+attempt+" attempt;");
         } 
 
 }
+
 
  }
 
